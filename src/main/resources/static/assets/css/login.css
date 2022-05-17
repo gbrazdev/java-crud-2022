@@ -1,0 +1,30 @@
+body {
+	color: aqua;
+	background-color:black;
+}
+
+.login {
+	display: block;
+	margin-top: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	float: none; /* Added */
+	
+}
+
+.btn-green {
+	background-color: aquamarine;
+}
+
+.img-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 7rem;
+}
+
+.card{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

@@ -1,0 +1,33 @@
+
+
+<div class="container" th:fragment="form(requisicaoFormExame, action)">
+    <div class="row">
+        <form th:object="${requisicaoFormExame}" th:action="${action}" method="POST">
+            <div class="mb-3">
+                
+                <select class="form-select" th:field="*{Exame}">
+                    <option th:each="exame : ${listaExame}"
+                            th:value="${exame}" th:text="${exame}"></option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Paciente</label>
+                <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{nomepaciente}">
+                <div class="invalid-feedback" th:errors="*{nomepaciente}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Data</label>
+                <input class="form-control" th:errorclass="is-invalid" type="date" th:field="*{data}">
+                <div class="invalid-feedback" th:errors="*{data}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Observacao</label>
+                <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{observacao}">
+                <div class="invalid-feedback" th:errors="*{observacao}"></div>
+            </div>          
+            
+            <button class="btn btn-primary" type="submit">Submeter</button>
+            <a href="javascript:history.back()">Voltar</a>
+        </form>
+    </div>
+</div>
